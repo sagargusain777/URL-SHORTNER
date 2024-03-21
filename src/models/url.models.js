@@ -1,4 +1,4 @@
-import mongoose from mongoose;
+import mongoose from 'mongoose';
 
 const urlSchema = new mongoose.Schema({
     shortId :{
@@ -13,4 +13,4 @@ const urlSchema = new mongoose.Schema({
     vistHistory : [{timestamps: {type : Number}}],
 },{timestamps: true});
 
-export const URL = mongoose.model('URL',urlSchema);
+export  const URL = mongoose.model('URL',urlSchema);
