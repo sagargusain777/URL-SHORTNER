@@ -1,0 +1,16 @@
+{
+  "name": "url_shortner",
+  "version": "1.0.0",
+  "description": "It shorts your URL",
+  "main": "index.js",
+  "type" : "module",
+  "scripts": {
+    "server": "nodemon  ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "mongoose": "^8.2.2"
+  }
+}
