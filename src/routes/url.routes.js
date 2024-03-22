@@ -3,6 +3,6 @@ import handleGenerateNewShortUrl from '../controllers/url.controllers.js'
 const router = express.Router();
 
 
-router.post('/api',handleGenerateNewShortUrl)
+router.post('/',handleGenerateNewShortUrl)
 
 export default router;
