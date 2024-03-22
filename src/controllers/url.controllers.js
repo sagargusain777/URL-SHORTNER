@@ -1,7 +1,7 @@
 import {nanoid} from 'nanoid';
 
  import {URL} from '../models/url.models.js';
-async function handleGenerateNewShortUrl(req,res){
+export const handleGenerateNewShortUrl= async(req,res)=>{
     const body = req.body;
     if(!body.url){
         return  res.status(400).json({error: 'URL is required'})
@@ -16,4 +16,14 @@ async function handleGenerateNewShortUrl(req,res){
     return res.json({id : shortID})
 
 }
-export default handleGenerateNewShortUrl;
+
+export  const handleAnalyticsData = async(req,res)=>{
+
+    const shortId = req.params.shortId;
+    console.log(shortId)
+
+    const analyticsData = await URL.findOne({shortId});
+
+    res.status(200).send(` total Clicks :${analyticsData.visitHistory.length}  Analytics : ${analyticsData.visitHistory} `)
+
+}
