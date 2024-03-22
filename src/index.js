@@ -8,7 +8,7 @@ import connectDB from "./db/db.js";
 
 const app = express();
 const PORT =process.env.PORT
-
+app.use(express.json({limit :"16kb"}))
 app.use("/url", urlRoute);
 
 
